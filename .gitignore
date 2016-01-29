@@ -204,7 +204,7 @@ KitKat/ProjectSettings/*.asset
 
 # ----[ Visual Studio / MonoDevelop generated ]------- #
 
-ExportedObj/
+KitKat/ExportedObj/
 *.svd
 *.userprefs
 *.csproj
