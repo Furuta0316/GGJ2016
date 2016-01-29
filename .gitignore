@@ -202,6 +202,7 @@ KitKat/[Oo]bj/
 KitKat/UnityGenerated/
 KitKat/ProjectSettings/*.asset
 
+
 # ----[ Visual Studio / MonoDevelop generated ]------- #
 
 KitKat/ExportedObj/
