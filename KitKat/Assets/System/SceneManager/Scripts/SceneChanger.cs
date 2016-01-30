@@ -13,9 +13,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 
 [RequireComponent(typeof(Canvas))]
 [AddComponentMenu("SceneManager/SceneChanger")]
@@ -25,18 +23,20 @@ public class SceneChanger : MonoBehaviour
 
     public enum SceneName
     {
-        scene2,
-        scene3,
+        Opening,
         Title,
+        StageSelect,
         MainGame,
-        Result,
+        Clear,
+        GameOver,
+        Ending,
     }
 
-    private float            speed;
-    private Color            col;
-    private bool             isLock = false;
-    private Image            image;
-    private GameObject       childObject;
+    private float      speed;
+    private Color      col;
+    private bool       isLock = false;
+    private Image      image;
+    private GameObject childObject;
 
     #endregion
 
