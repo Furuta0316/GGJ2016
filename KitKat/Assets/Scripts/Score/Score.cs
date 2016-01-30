@@ -16,6 +16,6 @@ public class Score : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Point.text = kazu.ToString ();
+		Point.text = "Score : " + kazu.ToString ();
 	}
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BulletButton : MonoBehaviour {
+public class Button : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -21,5 +21,9 @@ public class BulletButton : MonoBehaviour {
 	}
 	public void ChangeG(){
 		GameObject.Find ("Player").GetComponent<SoyShot_oti> ().ShotColor = 3;
+	}
+	public void huku(){
+		GameObject.Find ("Player").GetComponent<Stoptime> ().stop = 3;
+		GameObject.Find ("Status").GetComponent<Huku> ().Change = false;
 	}
 }

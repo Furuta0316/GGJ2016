@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Soy
   - EnemyAtack
+  - EnemyAttack
   layers:
   - Default
   - TransparentFX
