@@ -13,6 +13,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 using System.Collections;
 
 [RequireComponent(typeof(Canvas))]
@@ -25,6 +26,7 @@ public class SceneChanger : MonoBehaviour
     {
         Opening,
         Title,
+        Tutorial,
         StageSelect,
         MainGame,
         Clear,
@@ -43,7 +45,21 @@ public class SceneChanger : MonoBehaviour
 
     #region プロパティ
 
+    public static SceneChanger Manager
+    {
+        get
+        {
+            GameObject manager = GameObject.Find("SceneManager");
+            if(manager != null)
+            {
+                return manager.GetComponent<SceneChanger>();
+            }
 
+            GameObject prefab = (GameObject)Resources.Load ("Prefabs/System/SceneManager");
+
+            return Instantiate(prefab).GetComponent<SceneChanger>();
+        }
+    }
 
     #endregion
 
@@ -72,6 +88,11 @@ public class SceneChanger : MonoBehaviour
 
     // 更新処理
     void Update() { }
+
+    public void SceneChange(string sceneName)
+    {
+        SceneChange((SceneName)Enum.Parse(typeof(SceneName), sceneName));
+    }
 
     public void SceneChange(SceneName sceneName, float fadeSpeed = 0.01f)
     {
@@ -124,6 +145,18 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene(sceneName.ToString(), LoadSceneMode.Single);
 
         StartCoroutine(FadeOut(speed, col));
+    }
+
+    public void StageLoad(int stageNumber)
+    {
+        SceneManager.LoadScene("stage" + stageNumber, LoadSceneMode.Additive);
+    }
+
+    IEnumerator SyncSceneChange(string name)
+    {
+        while(true)
+        {
+        }
     }
 	#endregion
 }
