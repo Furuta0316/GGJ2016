@@ -4,7 +4,7 @@ using System.Collections;
 public class Mame_oti : MonoBehaviour {
 	public int speed;
 	public float time;
-
+	public GameObject HitSE;
 	// Use this for initialization
 	void Start () {
 		GetComponent<Rigidbody> ().AddForce (-500.0f, 250.0f, 0.0f, ForceMode.Force);
@@ -19,7 +19,7 @@ public class Mame_oti : MonoBehaviour {
 
 	void OnCollisionEnter(Collision c){
 		if (c.gameObject.tag == "Enemy") {
-			
+			Instantiate (HitSE,Vector3.zero,Quaternion.identity);
 			GameObject.Find ("Status").GetComponent<Score> ().kazu += 100;
 		}
 	}

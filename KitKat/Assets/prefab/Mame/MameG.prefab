@@ -118,7 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -10
-  time: 0
+  time: 3
+  HitSE: {fileID: 141818, guid: 68741c1b460675d4b9142ecdc551b19e, type: 2}
 --- !u!114 &11462788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,6 +168,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: speed
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HitSE
+      value: 
+      objectReference: {fileID: 141818, guid: 68741c1b460675d4b9142ecdc551b19e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: time
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
