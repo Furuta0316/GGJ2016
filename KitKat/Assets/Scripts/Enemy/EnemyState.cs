@@ -14,6 +14,8 @@ public class EnemyState : MonoBehaviour {
 	protected bool Deviated;//ずれる
 	protected bool Escape;//逃げる(やられた)
 	protected bool AtackFlag;//攻撃するフラグ
+	protected bool Standflag;//立つ
+	protected int StandTime;
 	// Use this for initialization
 	void Start () {
 

@@ -6,8 +6,11 @@ public class Enemy1 : EnemyState {
 	int initTime;//ノックバック時間の初期値	
 	EnemyAtack  enemyAtack;//
 	int DeviatTime;
+	 GameObject Boy1;
+	public int PlayerLine;//プレイヤーのいるライン
 	// Use this for initialization
 	void Start () {
+		Boy1 = GameObject.Find ("Player");
 		PanelZSize = 5;
 		getPosition();//初期座標取得
 		speed = 3;//速さ設定
@@ -20,6 +23,7 @@ public class Enemy1 : EnemyState {
 		enemyAtack = this.gameObject.GetComponent<EnemyAtack> (); 
 		Deviated = false;
 		DeviatTime=10;
+		StandTime = 100;
 	}
 
 	// Update is called once per frame
@@ -27,7 +31,7 @@ public class Enemy1 : EnemyState {
 		//debug
 		if(Input.GetKeyDown(KeyCode.A)){
 			//Bend ();
-			Escape = true;
+			//Escape = true;
 			//AtackFlag=true;
 		}
 	}
@@ -35,16 +39,28 @@ public class Enemy1 : EnemyState {
 		getPosition ();//座標更新
 		if(!Escape){
 		line = getLineNumber (Position);//行番更新
+			PlayerLine=getLineNumber(Boy1.transform.position);
+			if(Boy1.transform.position.z<-0.7f){//ごりおし
+				PlayerLine = 3;
+			}
 			}
 		if(Escape){
 			line = 0;
 		}
 		if(!NockBack&&!Escape){//仰け反ってない状態かつやられていない状態
+			if (PlayerLine == line && Vector3.Distance (Boy1.transform.position, Position) < 3) {
+				AtackFlag = true;
+
+			} else {
+				AtackFlag = false;	
+
+			}
 			if(!AtackFlag){
 		Move ();
 			}
 			if(AtackFlag){
-				Atack ();
+				Stand ();
+			
 			}
 		}
 			//仰け反り
@@ -95,6 +111,8 @@ public class Enemy1 : EnemyState {
 	}
 	void Atack(){
 		enemyAtack.enabled = true;//
+
+		Debug.Log("a");
 	}
 	void OnCollisionEnter(Collision col){
 		if(col.collider.tag=="Soy"){//豆との当たり判定
@@ -111,6 +129,17 @@ public class Enemy1 : EnemyState {
 		--DeviatTime;
 		if(DeviatTime<0){
 		Deviated = true;
+		}
+	}
+	void Stand(){
+		Standflag = true;
+		if(Standflag){
+			--StandTime;
+		}
+		if(StandTime<0){
+			Atack ();
+			Standflag = false;
+			StandTime = 100;
 		}
 	}
 	void OnBecameInvisible(){
