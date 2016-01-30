@@ -12,7 +12,7 @@ public class Player_oti : MonoBehaviour {
 	private float Y;
 	private float Z;
 
-	public GameObject Player;
+	//public GameObject Player;
 	public int moveF = 0;
 	public int moveP = 0;
 	public float speed;
