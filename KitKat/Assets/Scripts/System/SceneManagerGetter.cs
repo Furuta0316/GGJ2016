@@ -36,13 +36,13 @@ public class SceneManagerGetter : MonoBehaviour
 	// 初期化処理
     void Awake()
     {
-
+        manager = SceneChanger.Manager;
     }
 
     // 更新前処理
     void Start()
     {
-        manager = GameObject.Find("SceneManager").GetComponent<SceneChanger>();
+        
     }
 
     // 更新処理
