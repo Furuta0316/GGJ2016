@@ -25,6 +25,7 @@ public class Player_oti : MonoBehaviour {
 	public Transform P31;
 	public Transform P32;
 	public Transform P33;
+	public Animator anim;
 
 	// Use this for initialization
 	void Start () {
@@ -86,91 +87,115 @@ public class Player_oti : MonoBehaviour {
 	{
 		if (moveP == 1) {
 			if (e.Direction.ToString () == "Down") {
+				anim.SetTrigger ("move");
 				moveF = 4;
 			}
 			if (e.Direction.ToString () == "Right") {
+				anim.SetTrigger ("move");
 				moveF = 2;
 			}
 		}
 		if (moveP == 2) {
 			if (e.Direction.ToString () == "Down") {
+				anim.SetTrigger ("move");
 				moveF = 5;
 			}
 			if (e.Direction.ToString () == "Right") {
+				anim.SetTrigger ("move");
 				moveF = 3;
 			}
 			if (e.Direction.ToString () == "Left") {
+				anim.SetTrigger ("move");
 				moveF = 1;
 			}
 		}
 		if (moveP == 3) {
 			if (e.Direction.ToString () == "Down") {
+				anim.SetTrigger ("move");
 				moveF = 6;
 			}
 			if (e.Direction.ToString () == "Left") {
+				anim.SetTrigger ("move");
 				moveF = 2;
 			}
 		}
 		if (moveP == 4) {
 			if (e.Direction.ToString () == "Up") {
+				anim.SetTrigger ("move");
 				moveF = 1;
 			}
 			if (e.Direction.ToString () == "Down") {
+				anim.SetTrigger ("move");
 				moveF = 7;
 			}
 			if (e.Direction.ToString () == "Right") {
+				anim.SetTrigger ("move");
 				moveF = 5;
 			}
 		}
 		if (moveP == 5) {
 			if (e.Direction.ToString () == "Up") {
+				anim.SetTrigger ("move");
 				moveF = 2;
 			}
 			if (e.Direction.ToString () == "Down") {
+				anim.SetTrigger ("move");
 				moveF = 8;
 			}
 			if (e.Direction.ToString () == "Right") {
+				anim.SetTrigger ("move");
 				moveF = 6;
 			}
 			if (e.Direction.ToString () == "Left") {
+				anim.SetTrigger ("move");
 				moveF = 4;
 			}
 		}
 		if (moveP == 6) {
 			if (e.Direction.ToString () == "Up") {
+				anim.SetTrigger ("move");
 				moveF = 3;
 			}
 			if (e.Direction.ToString () == "Down") {
+				anim.SetTrigger ("move");
 				moveF = 9;
 			}
 			if (e.Direction.ToString () == "Left") {
+				anim.SetTrigger ("move");
 				moveF = 5;
 			}
 		}
 		if (moveP == 7) {
 			if (e.Direction.ToString () == "Up") {
+				anim.SetTrigger ("move");
 				moveF = 4;
 			}
 			if (e.Direction.ToString () == "Right") {
+				anim.SetTrigger ("move");
 				moveF = 8;
 			}
 		}
 		if (moveP == 8) {
 			if (e.Direction.ToString () == "Up") {
+				anim.SetTrigger ("move");
 				moveF = 5;
 			}
 			if (e.Direction.ToString () == "Right") {
+				anim.SetTrigger ("move");
 				moveF = 9;
 			}
 			if (e.Direction.ToString () == "Left") {
+				anim.SetTrigger ("move");
 				moveF = 7;
 			}
 		}
 		if (moveP == 9) {
 			if (e.Direction.ToString () == "Up") {
+				anim.SetTrigger ("move");
 				moveF = 6;
 			}
 			if (e.Direction.ToString () == "Left") {
+				anim.SetTrigger ("move");
 				moveF = 8;
 			}
 		}
