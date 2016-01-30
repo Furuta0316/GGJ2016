@@ -85,92 +85,92 @@ public class Player_oti : MonoBehaviour {
 	void OnFlickStart (object sender, FlickEventArgs e)
 	{
 		if (moveP == 1) {
-			if (e.Direction.ToString() == "Down") {
+			if (e.Direction.ToString () == "Down") {
 				moveF = 4;
 			}
-			if (e.Direction.ToString() == "Right") {
+			if (e.Direction.ToString () == "Right") {
 				moveF = 2;
 			}
 		}
 		if (moveP == 2) {
-			if (e.Direction.ToString() == "Down") {
+			if (e.Direction.ToString () == "Down") {
 				moveF = 5;
 			}
-			if (e.Direction.ToString() == "Right") {
+			if (e.Direction.ToString () == "Right") {
 				moveF = 3;
 			}
-			if (e.Direction.ToString() == "Left") {
+			if (e.Direction.ToString () == "Left") {
 				moveF = 1;
 			}
 		}
 		if (moveP == 3) {
-			if (e.Direction.ToString() == "Down") {
+			if (e.Direction.ToString () == "Down") {
 				moveF = 6;
 			}
-			if (e.Direction.ToString() == "Left") {
+			if (e.Direction.ToString () == "Left") {
 				moveF = 2;
 			}
 		}
 		if (moveP == 4) {
-			if (e.Direction.ToString() == "Up") {
+			if (e.Direction.ToString () == "Up") {
 				moveF = 1;
 			}
-			if (e.Direction.ToString() == "Down") {
+			if (e.Direction.ToString () == "Down") {
 				moveF = 7;
 			}
-			if (e.Direction.ToString() == "Right") {
+			if (e.Direction.ToString () == "Right") {
 				moveF = 5;
 			}
 		}
 		if (moveP == 5) {
-			if (e.Direction.ToString() == "Up") {
+			if (e.Direction.ToString () == "Up") {
 				moveF = 2;
 			}
-			if (e.Direction.ToString() == "Down") {
+			if (e.Direction.ToString () == "Down") {
 				moveF = 8;
 			}
-			if (e.Direction.ToString() == "Right") {
+			if (e.Direction.ToString () == "Right") {
 				moveF = 6;
 			}
-			if (e.Direction.ToString() == "Left") {
+			if (e.Direction.ToString () == "Left") {
 				moveF = 4;
 			}
 		}
 		if (moveP == 6) {
-			if (e.Direction.ToString() == "Up") {
+			if (e.Direction.ToString () == "Up") {
 				moveF = 3;
 			}
-			if (e.Direction.ToString() == "Down") {
+			if (e.Direction.ToString () == "Down") {
 				moveF = 9;
 			}
-			if (e.Direction.ToString() == "Left") {
+			if (e.Direction.ToString () == "Left") {
 				moveF = 5;
 			}
 		}
 		if (moveP == 7) {
-			if (e.Direction.ToString() == "Up") {
+			if (e.Direction.ToString () == "Up") {
 				moveF = 4;
 			}
-			if (e.Direction.ToString() == "Right") {
+			if (e.Direction.ToString () == "Right") {
 				moveF = 8;
 			}
 		}
 		if (moveP == 8) {
-			if (e.Direction.ToString() == "Up") {
+			if (e.Direction.ToString () == "Up") {
 				moveF = 5;
 			}
-			if (e.Direction.ToString() == "Right") {
+			if (e.Direction.ToString () == "Right") {
 				moveF = 9;
 			}
-			if (e.Direction.ToString() == "Left") {
+			if (e.Direction.ToString () == "Left") {
 				moveF = 7;
 			}
 		}
 		if (moveP == 9) {
-			if (e.Direction.ToString() == "Up") {
+			if (e.Direction.ToString () == "Up") {
 				moveF = 6;
 			}
-			if (e.Direction.ToString() == "Left") {
+			if (e.Direction.ToString () == "Left") {
 				moveF = 8;
 			}
 		}

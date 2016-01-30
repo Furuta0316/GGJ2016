@@ -47,6 +47,7 @@ MonoBehaviour:
   DetectAcceleration: 10000
   DefeatSpeed: 100
   MinFlickDistance: 0
+  ContinuousDetect: 1
 --- !u!114 &11448806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -92,4 +93,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 147012}
   m_IsPrefabParent: 1
-  m_IsExploded: 1
