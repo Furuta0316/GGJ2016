@@ -25,7 +25,7 @@ public class Enemy1 : EnemyState {
 		if(Input.GetKeyDown(KeyCode.A)){
 			//Bend ();
 			//Escape = true;
-			AtackFlag=true;
+			//AtackFlag=true;
 		}
 	}
 	void FixedUpdate(){
