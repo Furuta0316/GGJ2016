@@ -19,8 +19,12 @@ public class EnemyManager : MonoBehaviour {
 	}
 
 	int getEnemyCount(){
+		int count = 0;
 		GameObject[] Enemys = GameObject.FindGameObjectsWithTag ("Enemy");//enemy全体
+		foreach (GameObject enemy in Enemys) {
+			++count;
 
-		return 0;
+		}
+		return count;
 	}
 }
