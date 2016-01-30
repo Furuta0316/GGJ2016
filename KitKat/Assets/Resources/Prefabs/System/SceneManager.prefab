@@ -11,7 +11,7 @@ GameObject:
   - 223: {fileID: 22339530}
   - 114: {fileID: 11421538}
   - 114: {fileID: 11476264}
-  - 114: {fileID: 11459094}
+  - 114: {fileID: 11494316}
   m_Layer: 5
   m_Name: SceneManager
   m_TagString: SceneManager
@@ -84,17 +84,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &11459094
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 139712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8adb70622af217641b7731143ed4d57f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11476264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,6 +100,17 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &11494316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8adb70622af217641b7731143ed4d57f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &22236998
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -39,8 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301f2610583d65440af9cf489daf90c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 0
-  sceneName: 0
+  time: 5
+  sceneName: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
