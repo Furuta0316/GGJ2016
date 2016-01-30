@@ -4,6 +4,7 @@ using System.Collections;
 public class Enemy1 : EnemyState {
 	//赤鬼のスクリプト
 	int initTime;//ノックバック時間の初期値	
+	EnemyAtack  enemyAtack;//
 	// Use this for initialization
 	void Start () {
 		PanelZSize = 5;
@@ -15,6 +16,7 @@ public class Enemy1 : EnemyState {
 		AtackFlag = false;
 		NockBackTime = 60;//ノックバック時間の設定
 		initTime=NockBackTime;
+		enemyAtack = this.gameObject.GetComponent<EnemyAtack> (); 
 	}
 
 	// Update is called once per frame
@@ -23,20 +25,28 @@ public class Enemy1 : EnemyState {
 		if(Input.GetKeyDown(KeyCode.A)){
 			//Bend ();
 			//Escape = true;
+			AtackFlag=true;
 		}
 	}
 	void FixedUpdate(){
 		getPosition ();//座標更新
 		line = getLineNumber (Position);//行番更新
 		if(!NockBack&&!Escape){//仰け反ってない状態かつやられていない状態
+			if(!AtackFlag){
 		Move ();
+			}
+			if(AtackFlag){
+				Atack ();
+			}
 		}
 			//仰け反り
 		if(NockBack&&!Escape){
 			BendTimeReduce ();
 		}
 
-
+		if(HP<=0){
+			Escape = true;
+		}
 		
 		if(Escape){
 			EscapeRun ();
@@ -68,6 +78,15 @@ public class Enemy1 : EnemyState {
 		transform.position = Position + Vector3.left * Time.deltaTime*speed;
 	}
 	void Atack(){
+		enemyAtack.enabled = true;//
+	}
+	void OnCollisionEnter(Collision col){
+		if(col.collider.tag=="Soy"){//豆との当たり判定
+			Bend();//仰け反り
+			if(HP>=1){
+			ReduceHP();
+			}
+		}
 
 	}
 }

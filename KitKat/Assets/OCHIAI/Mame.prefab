@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2368906}
   - 114: {fileID: 11451644}
   - 54: {fileID: 5447398}
+  - 114: {fileID: 11497316}
   m_Layer: 9
   m_Name: Mame
   m_TagString: Soy
@@ -88,10 +89,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 143296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421e7513c7a43b44fa1e45299cc1a701, type: 3}
+  m_Script: {fileID: 11500000, guid: 433a5d0dd5f353946a87fbe7d11e9d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -10
+--- !u!114 &11497316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82aebf2a2f6b6843a415b94bd81fbe0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &13592888
 SphereCollider:
   m_ObjectHideFlags: 1

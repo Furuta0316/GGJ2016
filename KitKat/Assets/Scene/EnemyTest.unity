@@ -530,7 +530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &627052084
 Transform:
   m_ObjectHideFlags: 0
@@ -538,7 +538,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 627052083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.924715, y: 8.279539, z: -5.8238354}
+  m_LocalPosition: {x: 14.924715, y: 8.279539, z: -6.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1259020290}
@@ -569,6 +569,7 @@ GameObject:
   - 114: {fileID: 1085620894}
   - 114: {fileID: 1085620895}
   - 136: {fileID: 1085620891}
+  - 114: {fileID: 1085620896}
   m_Layer: 0
   m_Name: Akaoni
   m_TagString: Enemy
@@ -664,6 +665,19 @@ MonoBehaviour:
   PanelXSize: 0
   line: 0
   column: 0
+--- !u!114 &1085620896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1085620889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a383f63a944077d44846ac44e91cf554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AtackPrefab: {fileID: 145832, guid: 5597148cf2742a74fb5e780753b2ae77, type: 2}
+  AtackLag: 0
 --- !u!4 &1169199565 stripped
 Transform:
   m_PrefabParentObject: {fileID: 442816, guid: 7e5df2e054634604e96a718e726ca5b6, type: 2}
@@ -846,7 +860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1291792211
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -899,7 +913,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1291792210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.2, y: -8.079539, z: 5.6238356}
+  m_LocalPosition: {x: -8.2, y: -8.27, z: 5.6238356}
   m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 627052084}
@@ -908,6 +922,51 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 439162, guid: 7e5df2e054634604e96a718e726ca5b6, type: 2}
   m_PrefabInternal: {fileID: 2126290943}
+--- !u!1 &1453466252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1453466254}
+  - 114: {fileID: 1453466253}
+  m_Layer: 0
+  m_Name: EnemyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1453466253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1453466252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f20ceefa5ee5a4b85b057081293d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxEnemyCount: 0
+  ClearCount: 0
+  EnemyCount: 0
+  Rine1: 0
+  Rine2: 0
+  Rine3: 0
+--- !u!4 &1453466254
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1453466252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4968667, y: 2.5028872, z: -0.37204552}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!4 &1666441038 stripped
 Transform:
   m_PrefabParentObject: {fileID: 416816, guid: 7e5df2e054634604e96a718e726ca5b6, type: 2}
@@ -995,6 +1054,33 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 429874, guid: 7e5df2e054634604e96a718e726ca5b6, type: 2}
   m_PrefabInternal: {fileID: 2126290943}
+--- !u!1 &1957127878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1957127879}
+  m_Layer: 0
+  m_Name: EnemyFactory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1957127879
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1957127878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.4968667, y: 2.5028872, z: -0.37204552}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!4 &2021852684 stripped
 Transform:
   m_PrefabParentObject: {fileID: 447394, guid: 7e5df2e054634604e96a718e726ca5b6, type: 2}
