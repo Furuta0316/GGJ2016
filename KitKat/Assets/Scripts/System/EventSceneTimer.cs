@@ -65,8 +65,6 @@ public class EventSceneTimer : MonoBehaviour
 
     public void Skip()
     {
-        StopAllCoroutines();
-
         manager.SceneChange(sceneName);
     }
 	#endregion
