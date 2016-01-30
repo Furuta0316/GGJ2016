@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class EnemyState : MonoBehaviour {
-	public int PanelZSize;//1マスの幅
+	public double PanelZSize;//1マスの幅
 	public int PanelXSize;//1マスの長さ
 	public int line;//敵のいる行(ライン)
 	public int column;//敵のいる列
@@ -11,6 +11,7 @@ public class EnemyState : MonoBehaviour {
 	protected Vector3 Position;//現在座標
 	protected bool NockBack;//ノックバック
 	protected int NockBackTime;//ノックバック時間
+	protected bool Deviated;//ずれる
 	protected bool Escape;//逃げる(やられた)
 	protected bool AtackFlag;//攻撃するフラグ
 	// Use this for initialization

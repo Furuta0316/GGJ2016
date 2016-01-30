@@ -5,6 +5,7 @@ public class Enemy1 : EnemyState {
 	//赤鬼のスクリプト
 	int initTime;//ノックバック時間の初期値	
 	EnemyAtack  enemyAtack;//
+	int DeviatTime;
 	// Use this for initialization
 	void Start () {
 		PanelZSize = 5;
@@ -17,6 +18,8 @@ public class Enemy1 : EnemyState {
 		NockBackTime = 60;//ノックバック時間の設定
 		initTime=NockBackTime;
 		enemyAtack = this.gameObject.GetComponent<EnemyAtack> (); 
+		Deviated = false;
+		DeviatTime=10;
 	}
 
 	// Update is called once per frame
@@ -24,13 +27,18 @@ public class Enemy1 : EnemyState {
 		//debug
 		if(Input.GetKeyDown(KeyCode.A)){
 			//Bend ();
-			//Escape = true;
+			Escape = true;
 			//AtackFlag=true;
 		}
 	}
 	void FixedUpdate(){
 		getPosition ();//座標更新
+		if(!Escape){
 		line = getLineNumber (Position);//行番更新
+			}
+		if(Escape){
+			line = 0;
+		}
 		if(!NockBack&&!Escape){//仰け反ってない状態かつやられていない状態
 			if(!AtackFlag){
 		Move ();
@@ -49,9 +57,17 @@ public class Enemy1 : EnemyState {
 		}
 		
 		if(Escape){
+			if(!Deviated){
+				YMove ();
+			}
+			if(Deviated){
 			EscapeRun ();
+			}
 		}
 		//
+		if(Position.x<-16){
+			Destroy (this.gameObject);
+		}
 	}
 	void Move(){//キャラの動き　真っ直ぐ
 		transform.position = Position + Vector3.right * Time.deltaTime*speed;
@@ -89,4 +105,16 @@ public class Enemy1 : EnemyState {
 		}
 
 	}
+	void YMove(){
+		speed = 10;//走るため速く
+		transform.position = Position + Vector3.forward * Time.deltaTime*speed;
+		--DeviatTime;
+		if(DeviatTime<0){
+		Deviated = true;
+		}
+	}
+	void OnBecameInvisible(){
+
+	
+		}
 }
