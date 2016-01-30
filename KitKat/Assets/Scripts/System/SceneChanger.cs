@@ -71,15 +71,6 @@ public class SceneChanger : MonoBehaviour
     {
         childObject = transform.GetChild(0).gameObject;
         image       = childObject.GetComponent<Image>();
-        name        = "temp";
-
-        if(GameObject.Find("SceneManager") != null)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        name = "SceneManager";
         DontDestroyOnLoad(gameObject);
     }
 
@@ -88,6 +79,11 @@ public class SceneChanger : MonoBehaviour
 
     // 更新処理
     void Update() { }
+
+    public void AddScene(SceneName sceneName)
+    {
+        SceneManager.LoadScene(sceneName.ToString());
+    }
 
     public void SceneChange(string sceneName)
     {
@@ -156,6 +152,8 @@ public class SceneChanger : MonoBehaviour
     {
         while(true)
         {
+            //後で
+            yield break;
         }
     }
 	#endregion
