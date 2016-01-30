@@ -8,8 +8,13 @@ public class Enemy1 : EnemyState {
 	int DeviatTime;
 	 GameObject Boy1;
 	public int PlayerLine;//プレイヤーのいるライン
+	public GameObject atackSe;
+	public GameObject EscapeSe;
+	public GameObject NockBackSE;
+	public int zero;
 	// Use this for initialization
 	void Start () {
+		zero = 1;
 		Boy1 = GameObject.Find ("Player");
 		PanelZSize = 5;
 		getPosition();//初期座標取得
@@ -24,6 +29,7 @@ public class Enemy1 : EnemyState {
 		Deviated = false;
 		DeviatTime=10;
 		StandTime = 100;
+
 	}
 
 	// Update is called once per frame
@@ -31,7 +37,7 @@ public class Enemy1 : EnemyState {
 		//debug
 		if(Input.GetKeyDown(KeyCode.A)){
 			//Bend ();
-			//Escape = true;
+			Escape = true;
 			//AtackFlag=true;
 		}
 	}
@@ -86,7 +92,7 @@ public class Enemy1 : EnemyState {
 		}
 	}
 	void Move(){//キャラの動き　真っ直ぐ
-		transform.position = Position + Vector3.right * Time.deltaTime*speed;
+		transform.position = Position + Vector3.right * Time.deltaTime*speed*zero;
 	}
 	void Bend(){//仰け反り
 		
@@ -112,13 +118,14 @@ public class Enemy1 : EnemyState {
 	void Atack(){
 		enemyAtack.enabled = true;//
 
-		Debug.Log("a");
+		Instantiate (atackSe,Vector3.zero,Quaternion.identity);//Debug.Log("a");
 	}
 	void OnCollisionEnter(Collision col){
 		if(col.collider.tag=="Soy"){//豆との当たり判定
 			Bend();//仰け反り
 			if(HP>=1){
 			ReduceHP();
+				Instantiate (NockBackSE,Vector3.zero,Quaternion.identity);//Debug.Log("a");
 			}
 		}
 
@@ -128,6 +135,7 @@ public class Enemy1 : EnemyState {
 		transform.position = Position + Vector3.forward * Time.deltaTime*speed;
 		--DeviatTime;
 		if(DeviatTime<0){
+			Instantiate (EscapeSe,Vector3.zero,Quaternion.identity);//Debug.Log("a");
 		Deviated = true;
 		}
 	}

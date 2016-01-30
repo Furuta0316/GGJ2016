@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11431996}
   - 114: {fileID: 11432504}
   - 114: {fileID: 11442464}
+  - 114: {fileID: 11466324}
   m_Layer: 0
   m_Name: Akaoni
   m_TagString: Enemy
@@ -30,6 +31,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 453450}
   - 212: {fileID: 21240232}
+  - 114: {fileID: 11449500}
   m_Layer: 0
   m_Name: Oni
   m_TagString: Untagged
@@ -202,6 +204,39 @@ MonoBehaviour:
   PanelXSize: 0
   line: 0
   column: 0
+  PlayerLine: 0
+  atackSe: {fileID: 166394, guid: f96a4fc4295240a429292a5c338ce173, type: 2}
+  EscapeSe: {fileID: 134062, guid: d9fedbba24ba9a940a1bda1f727a09d5, type: 2}
+  NockBackSE: {fileID: 133622, guid: a0ae6e67d2ee7174c95d6ea518cf3c06, type: 2}
+  zero: 0
+--- !u!114 &11449500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b496c4ae5ed6854cbd21729605ed344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Oni:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &11466324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107262}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68e97c42ac642164bb4b88dd1f59b468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOverSE: {fileID: 119702, guid: d23ef74ce38a5c54f93cbd4c6d2e658b, type: 2}
+  flag: 0
 --- !u!136 &13681632
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -264,7 +299,31 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: atackSe
+      value: 
+      objectReference: {fileID: 166394, guid: f96a4fc4295240a429292a5c338ce173, type: 2}
+    - target: {fileID: 0}
+      propertyPath: EscapeSe
+      value: 
+      objectReference: {fileID: 134062, guid: d9fedbba24ba9a940a1bda1f727a09d5, type: 2}
+    - target: {fileID: 0}
+      propertyPath: NockBackSE
+      value: 
+      objectReference: {fileID: 133622, guid: a0ae6e67d2ee7174c95d6ea518cf3c06, type: 2}
+    - target: {fileID: 0}
+      propertyPath: GameOverSE
+      value: 
+      objectReference: {fileID: 119702, guid: d23ef74ce38a5c54f93cbd4c6d2e658b, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 107262}

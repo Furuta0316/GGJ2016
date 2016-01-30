@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Stoptime : MonoBehaviour {
 	public int stop;
-
+	public GameObject damegeSE;
 	private float time;
 	private float MTime;
 
@@ -61,6 +61,8 @@ public class Stoptime : MonoBehaviour {
 			GameObject.Find("Player").GetComponent<BoxCollider> ().enabled = false;
 			GameObject.Find ("Status").GetComponent<Huku> ().HON = true;
 			GameObject.Find ("Status").GetComponent<Score> ().Perfect = true;
+
+			Instantiate (damegeSE,Vector3.zero,Quaternion.identity);//Debug.Log("a");
 			stop = 1;
 			time = 0;
 			MTime = 0;
@@ -72,6 +74,7 @@ public class Stoptime : MonoBehaviour {
 			GameObject.Find("Player").GetComponent<BoxCollider> ().enabled = false;
 			GameObject.Find ("Status").GetComponent<Huku> ().HON = true;
 			GameObject.Find ("Status").GetComponent<Score> ().Perfect = true;
+			Instantiate (damegeSE,Vector3.zero,Quaternion.identity);
 			stop = 2;
 			time = 0;
 			MTime = 0;
