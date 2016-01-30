@@ -15,6 +15,8 @@ GameObject:
   - 54: {fileID: 5400730}
   - 114: {fileID: 11431768}
   - 114: {fileID: 11462272}
+  - 114: {fileID: 11433796}
+  - 114: {fileID: 11463236}
   m_Layer: 9
   m_Name: MameB
   m_TagString: Soy
@@ -106,6 +108,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b82aebf2a2f6b6843a415b94bd81fbe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11433796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1d1f512a7912249bb1effcae60a803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11462272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,6 +128,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc115181ab7a3a345a44275fe05b7b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -10
+  time: 0
+--- !u!114 &11463236
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28dc8f0670275b449a5c7809b3e3bd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -10

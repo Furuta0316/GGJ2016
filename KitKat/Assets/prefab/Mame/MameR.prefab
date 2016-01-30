@@ -15,6 +15,8 @@ GameObject:
   - 54: {fileID: 5424704}
   - 114: {fileID: 11480570}
   - 114: {fileID: 11459336}
+  - 114: {fileID: 11433192}
+  - 114: {fileID: 11456270}
   m_Layer: 9
   m_Name: MameR
   m_TagString: Soy
@@ -82,6 +84,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 12
   m_CollisionDetection: 0
+--- !u!114 &11433192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28dc8f0670275b449a5c7809b3e3bd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: -10
+  time: 0
+--- !u!114 &11456270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1d1f512a7912249bb1effcae60a803, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11457336
 MonoBehaviour:
   m_ObjectHideFlags: 1
