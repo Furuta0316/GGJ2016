@@ -7,11 +7,13 @@ public class SoyShot_oti : MonoBehaviour {
 	public GameObject MameG;
 	public float time;
 	public int ShotColor;
+	public Animator anim;
 	private bool isRunning;
 
 	// Use this for initialization
 	void Start () {
 		//StartCoroutine ("Soy");
+		anim.GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -26,12 +28,15 @@ public class SoyShot_oti : MonoBehaviour {
 
 			yield return new WaitForSeconds (time);
 			if (ShotColor == 1) {
+				anim.SetTrigger ("throw");
 				Instantiate (MameR, this.transform.position, this.transform.rotation);
 			}
 			if (ShotColor == 2) {
+				anim.SetTrigger ("throw");
 				Instantiate (MameB, this.transform.position, this.transform.rotation);
 			}
 			if (ShotColor == 3) {
+				anim.SetTrigger ("throw");
 				Instantiate (MameG, this.transform.position, this.transform.rotation);
 			}
 			yield return new WaitForSeconds (time);
