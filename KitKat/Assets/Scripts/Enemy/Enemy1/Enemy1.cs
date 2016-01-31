@@ -88,6 +88,7 @@ public class Enemy1 : EnemyState {
 		}
 		//
 		if(Position.x<-16){
+			GameObject.Find ("EnemyManager").GetComponent<EnemyManager> ().ReduceClearCount();
 			Destroy (this.gameObject);
 		}
 	}

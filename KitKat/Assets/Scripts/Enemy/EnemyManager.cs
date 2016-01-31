@@ -8,16 +8,23 @@ public class EnemyManager : MonoBehaviour {
 	public bool Line1;//ライン1にいるか？
 	public bool Line2;//ライン2にいるか？
 	public bool Line3;//ライン3にいるか？
+	public bool flag;
 	// Use this for initialization
 	void Start () {
 		//初期状態取得
 		EnemyCount = getEnemyCount ();
 		LineBoolChange ();
+		flag = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (ClearCount <= 0) {
+			if(!flag){
+				SceneChanger.Manager.AddScene (SceneChanger.SceneName.Clear);
+				flag = true;
+			}
+		}
 	}
 	void FixedUpdate(){
 		//更新処理

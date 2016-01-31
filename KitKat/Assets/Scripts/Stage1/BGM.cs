@@ -25,6 +25,7 @@ public class BGM : MonoBehaviour {
 				audio.mute = true;
 				if(!flag){
 					Instantiate (GameOverSE,Vector3.zero,Quaternion.identity);
+					SceneChanger.Manager.AddScene (SceneChanger.SceneName.GameOver);
 					flag = true;
 				}
 			
