@@ -967,13 +967,14 @@ MonoBehaviour:
   P32: {fileID: 1005229071}
   P33: {fileID: 1227479597}
   anim: {fileID: 1385985242}
+  time: 0
 --- !u!114 &812467234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 812467228}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac10f2dc7c83fbb4594ca172c7c55f9a, type: 3}
   m_Name: 
@@ -984,6 +985,7 @@ MonoBehaviour:
   time: 1
   ShotColor: 1
   anim: {fileID: 1385985242}
+  nageru: 0
 --- !u!114 &812467235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1708,7 +1710,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11449500, guid: 5cfd8cbb16769d24d9eb1db3d81dc4f1, type: 2}
       propertyPath: Oni.Array.size
-      value: 12
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 416810, guid: 5cfd8cbb16769d24d9eb1db3d81dc4f1, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1828,22 +1830,22 @@ Prefab:
     - target: {fileID: 11449500, guid: 5cfd8cbb16769d24d9eb1db3d81dc4f1, type: 2}
       propertyPath: Oni.Array.data[12]
       value: 
-      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+      objectReference: {fileID: 21300000, guid: 833880198bd027d42878eec509fd5ead,
         type: 3}
     - target: {fileID: 11449500, guid: 5cfd8cbb16769d24d9eb1db3d81dc4f1, type: 2}
       propertyPath: Oni.Array.data[13]
       value: 
-      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+      objectReference: {fileID: 21300000, guid: d22796a5b77f9ec4dbf7bd4153cc77a3,
         type: 3}
     - target: {fileID: 11449500, guid: 5cfd8cbb16769d24d9eb1db3d81dc4f1, type: 2}
       propertyPath: Oni.Array.data[14]
       value: 
-      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+      objectReference: {fileID: 21300000, guid: 96c16eefc4baf364c9e45087a39245cc,
         type: 3}
     - target: {fileID: 11449500, guid: 5cfd8cbb16769d24d9eb1db3d81dc4f1, type: 2}
       propertyPath: Oni.Array.data[15]
       value: 
-      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+      objectReference: {fileID: 21300000, guid: c3cef351293d2a84dbf808b5e9820ce6,
         type: 3}
     - target: {fileID: 11449500, guid: 5cfd8cbb16769d24d9eb1db3d81dc4f1, type: 2}
       propertyPath: Oni.Array.data[16]
@@ -1873,6 +1875,11 @@ Prefab:
       propertyPath: child
       value: 
       objectReference: {fileID: 27281018}
+    - target: {fileID: 11449500, guid: 5cfd8cbb16769d24d9eb1db3d81dc4f1, type: 2}
+      propertyPath: Oni.Array.data[11]
+      value: 
+      objectReference: {fileID: 21300000, guid: acff30c4468ac2c4796192acdef5a953,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cfd8cbb16769d24d9eb1db3d81dc4f1, type: 2}
   m_IsPrefabParent: 0
