@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d85040767f38104d950ca7c1e92558b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityY: 0.8
+  velocityY: 2
   pauseTimeFirstTime: 50
 --- !u!1 &1464939819
 GameObject:
