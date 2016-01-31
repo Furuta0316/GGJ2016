@@ -1,10 +1,11 @@
 fileFormatVersion: 2
 guid: 59c14ff6cf0459c43867193f39a48c9a
-timeCreated: 1454207201
+timeCreated: 1454207356
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: field_0
+    21300000: field_1
+    21300002: field_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -51,7 +52,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: field_0
+    - name: field_1
       rect:
         serializedVersion: 2
         x: 0
@@ -66,6 +67,21 @@ TextureImporter:
         - {x: -640, y: -405.07812}
         - {x: 640, y: -405.07812}
         - {x: 640, y: 405.92188}
+    - name: field_0
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 8
+        width: 964
+        height: 1011
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -386.98242, y: 406.42188}
+        - {x: -386.98242, y: -405.57812}
+        - {x: 388.01758, y: -405.57812}
+        - {x: 388.01758, y: 406.42188}
     outline: []
   spritePackingTag: 
   userData: 
