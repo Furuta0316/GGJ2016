@@ -17,7 +17,7 @@ public class Stoptime : MonoBehaviour {
 	void Update () {
 		if (stop == 1) {
 			time += Time.deltaTime;
-			if (time >= 1.0f) {
+			if (time >= 3.0f) {
 				GameObject.Find ("Player").GetComponent<Player_oti> ().enabled = true;
 				GameObject.Find("Player").GetComponent<SoyShot_oti> ().enabled = true;
 				GameObject.Find ("Status").GetComponent<Huku> ().HON = false;
@@ -30,7 +30,7 @@ public class Stoptime : MonoBehaviour {
 		}
 		if (stop == 2) {
 			time += Time.deltaTime;
-			if (time >= 5.0f) {
+			if (time >= 3.0f) {
 				GameObject.Find("Player").GetComponent<Player_oti> ().enabled = true;
 				GameObject.Find("Player").GetComponent<SoyShot_oti> ().enabled = true;
 				GameObject.Find ("Status").GetComponent<Huku> ().HON = false;
@@ -56,7 +56,6 @@ public class Stoptime : MonoBehaviour {
 
 	void OnCollisionEnter(Collision c){
 		if (c.gameObject.tag == "Enemy") {
-			Destroy (c.gameObject);
 			GameObject.Find("Player").GetComponent<Player_oti> ().enabled = false;
 			GameObject.Find("Player").GetComponent<SoyShot_oti> ().enabled = false;
 			GameObject.Find("Player").GetComponent<BoxCollider> ().enabled = false;
@@ -69,7 +68,6 @@ public class Stoptime : MonoBehaviour {
 			MTime = 0;
 		}
 		if (c.gameObject.tag == "EnemyAttack") {
-			Destroy (c.gameObject);
 			GameObject.Find("Player").GetComponent<Player_oti> ().enabled = false;
 			GameObject.Find("Player").GetComponent<SoyShot_oti> ().enabled = false;
 			GameObject.Find("Player").GetComponent<BoxCollider> ().enabled = false;

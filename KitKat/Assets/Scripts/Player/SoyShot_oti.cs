@@ -9,6 +9,7 @@ public class SoyShot_oti : MonoBehaviour {
 	public int ShotColor;
 	public Animator anim;
 	private bool isRunning;
+	public bool nageru;
 
 	// Use this for initialization
 	void Start () {
@@ -27,17 +28,19 @@ public class SoyShot_oti : MonoBehaviour {
 			isRunning = true;
 
 			yield return new WaitForSeconds (time);
-			if (ShotColor == 1) {
-				anim.SetTrigger ("throw");
-				Instantiate (MameR, this.transform.position, this.transform.rotation);
-			}
-			if (ShotColor == 2) {
-				anim.SetTrigger ("throw");
-				Instantiate (MameB, this.transform.position, this.transform.rotation);
-			}
-			if (ShotColor == 3) {
-				anim.SetTrigger ("throw");
-				Instantiate (MameG, this.transform.position, this.transform.rotation);
+			if (nageru == true) {
+				if (ShotColor == 1) {
+					anim.SetTrigger ("throw");
+					Instantiate (MameR, this.transform.position, this.transform.rotation);
+				}
+				if (ShotColor == 2) {
+					anim.SetTrigger ("throw");
+					Instantiate (MameB, this.transform.position, this.transform.rotation);
+				}
+				if (ShotColor == 3) {
+					anim.SetTrigger ("throw");
+					Instantiate (MameG, this.transform.position, this.transform.rotation);
+				}
 			}
 			yield return new WaitForSeconds (time);
 
