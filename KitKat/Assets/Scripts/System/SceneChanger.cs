@@ -90,12 +90,12 @@ public class SceneChanger : MonoBehaviour
         SceneChange((SceneName)Enum.Parse(typeof(SceneName), sceneName));
     }
 
-    public void SceneChange(SceneName sceneName, float fadeSpeed = 0.01f)
+    public void SceneChange(SceneName sceneName, float fadeSpeed = 0.05f)
     {
         SceneChange(sceneName, new Color(0, 0, 0, 0), fadeSpeed);
     }
 
-    public void SceneChange(SceneName sceneName, Color fadeColor, float fadeSpeed = 0.01f)
+    public void SceneChange(SceneName sceneName, Color fadeColor, float fadeSpeed = 0.05f)
     {
         if(isLock == false)
         {

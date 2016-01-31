@@ -19,6 +19,8 @@ public class SceneManagerGetter : MonoBehaviour
 {
 	#region 変数
 
+	[Range(0, 1)]
+	public float speed = 0.01f;
     private SceneChanger manager;
 
     #endregion
@@ -50,6 +52,11 @@ public class SceneManagerGetter : MonoBehaviour
     {
         
     }
+
+	public void SetSpeed(float _speed)
+	{
+		speed = _speed;
+	}
 
     public void SceneChange(string sceneName)
     {
