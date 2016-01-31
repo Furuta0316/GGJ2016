@@ -2042,7 +2042,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2031610241
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 59c14ff6cf0459c43867193f39a48c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 0, a: 0.39215687}
@@ -2711,8 +2711,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1259693301}
   m_RootOrder: 4
-  m_AnchorMin: {x: 0.29923216, y: 0.90000004}
-  m_AnchorMax: {x: 0.70323217, y: 0.9821428}
+  m_AnchorMin: {x: 0.29923216, y: 0.8166856}
+  m_AnchorMax: {x: 0.7056245, y: 0.9821428}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2728,7 +2728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2741,7 +2741,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -6062,7 +6062,7 @@ MonoBehaviour:
   z: 0
   moveF: 0
   moveP: 6
-  speed: 5
+  speed: 10
   P11: {fileID: 1857792103}
   P12: {fileID: 1809588074}
   P13: {fileID: 544054067}
@@ -10071,6 +10071,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0.3742187
       objectReference: {fileID: 0}
+    - target: {fileID: 21240232, guid: 5cfd8cbb16769d24d9eb1db3d81dc4f1, type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1298636809
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5cfd8cbb16769d24d9eb1db3d81dc4f1, type: 2}
   m_IsPrefabParent: 0
@@ -10128,7 +10132,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1298636809
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b5901c1e35a5b3a488316dd5f5d09f3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10191,7 +10195,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2031610241
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: 59c14ff6cf0459c43867193f39a48c9a, type: 3}
   m_Color: {r: 0.43137255, g: 0.47058824, b: 1, a: 0.39215687}
@@ -12282,7 +12286,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1259693301}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.017857144, y: 0.88571423}
+  m_AnchorMin: {x: 0.017857144, y: 0.8166856}
   m_AnchorMax: {x: 0.5, y: 0.9821428}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -12299,7 +12303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -12312,7 +12316,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 80
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -12587,7 +12591,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
+  m_SortingLayerID: 2031610241
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 59c14ff6cf0459c43867193f39a48c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 0, a: 0.39215687}
