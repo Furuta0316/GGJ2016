@@ -102,11 +102,11 @@ public class SceneChanger : MonoBehaviour
         {
             speed  = fadeSpeed;
             col    = fadeColor;
-            StartCoroutine(FadeIn(sceneName, fadeSpeed, fadeColor));
+            StartCoroutine(FadeIn(sceneName.ToString(), fadeSpeed, fadeColor));
         }
     }
 
-    IEnumerator FadeIn(SceneName sceneName, float fadeSpeed, Color fadeColor)
+    IEnumerator FadeIn(string sceneName, float fadeSpeed, Color fadeColor)
     {
         isLock = true;
 
@@ -137,21 +137,22 @@ public class SceneChanger : MonoBehaviour
         speed  = 0;
     }
 
-    void Change(SceneName sceneName)
+    void Change(string sceneName)
     {
-        if(sceneName == SceneName.Exit)
+        if(sceneName == "Exit")
         {
             Application.Quit();
         }
 
-        SceneManager.LoadScene(sceneName.ToString(), LoadSceneMode.Single);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
 
         StartCoroutine(FadeOut(speed, col));
     }
 
     public void StageLoad(int stageNumber)
     {
-        SceneManager.LoadScene("Stage" + stageNumber, LoadSceneMode.Single);
+        speed = 0.05f;
+        StartCoroutine(FadeIn("Stage" + stageNumber, 0.05f, new Color(0, 0, 0, 0)));
     }
 
     IEnumerator SyncSceneChange(string name)
