@@ -32,6 +32,7 @@ public class SceneChanger : MonoBehaviour
         Clear,
         GameOver,
         Ending,
+        Exit,
     }
 
     private float      speed;
@@ -138,6 +139,11 @@ public class SceneChanger : MonoBehaviour
 
     void Change(SceneName sceneName)
     {
+        if(sceneName == SceneName.Exit)
+        {
+            Application.Quit();
+        }
+
         SceneManager.LoadScene(sceneName.ToString(), LoadSceneMode.Single);
 
         StartCoroutine(FadeOut(speed, col));
