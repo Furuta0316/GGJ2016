@@ -43,7 +43,7 @@ public class ParticleSystemAutoDestroy : MonoBehaviour
     // 更新前処理
     void Start()
     {
-        
+        StartCoroutine(AutoDestroy());
     }
 
     // 更新処理
