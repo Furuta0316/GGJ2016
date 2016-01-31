@@ -182,6 +182,7 @@ GameObject:
   - 222: {fileID: 86932151}
   - 114: {fileID: 86932150}
   - 114: {fileID: 86932152}
+  - 95: {fileID: 86932153}
   m_Layer: 5
   m_Name: Stage02
   m_TagString: Untagged
@@ -289,8 +290,36 @@ MonoBehaviour:
           m_StringArgument: Stage2
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 86932153}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!95 &86932153
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 86932148}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d1d16fc1bf4d7f4fa07728efed19af1, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &91723880
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +331,7 @@ GameObject:
   - 222: {fileID: 91723883}
   - 114: {fileID: 91723882}
   - 114: {fileID: 91723884}
+  - 95: {fileID: 91723885}
   m_Layer: 5
   m_Name: tutoreal
   m_TagString: Untagged
@@ -317,7 +347,7 @@ RectTransform:
   m_GameObject: {fileID: 91723880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 2017026846}
   m_RootOrder: 0
@@ -409,8 +439,36 @@ MonoBehaviour:
           m_StringArgument: Stage1_example
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 91723885}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!95 &91723885
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91723880}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d1d16fc1bf4d7f4fa07728efed19af1, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &208055219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,6 +1155,7 @@ GameObject:
   - 222: {fileID: 1017317028}
   - 114: {fileID: 1017317027}
   - 114: {fileID: 1017317029}
+  - 95: {fileID: 1017317030}
   m_Layer: 5
   m_Name: Stage01
   m_TagString: Untagged
@@ -1204,8 +1263,36 @@ MonoBehaviour:
           m_StringArgument: Stage1_example
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1017317030}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!95 &1017317030
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017317025}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d1d16fc1bf4d7f4fa07728efed19af1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1333974784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1377,7 @@ GameObject:
   - 222: {fileID: 1660973927}
   - 114: {fileID: 1660973926}
   - 114: {fileID: 1660973928}
+  - 95: {fileID: 1660973929}
   m_Layer: 5
   m_Name: Stage03
   m_TagString: Untagged
@@ -1397,8 +1485,36 @@ MonoBehaviour:
           m_StringArgument: Stage3
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1660973929}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: click
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!95 &1660973929
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1660973924}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d1d16fc1bf4d7f4fa07728efed19af1, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1729511786
 GameObject:
   m_ObjectHideFlags: 0
