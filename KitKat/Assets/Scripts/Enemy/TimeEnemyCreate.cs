@@ -4,6 +4,7 @@ using System.Collections;
 public class TimeEnemyCreate : MonoBehaviour {
 	TimeEnemyManage time;
 	public int[] CreateTime;
+	public int[] LineNumber;//0~2=1~3ライン
 	public GameObject Enemy;//生産する敵
 	public GameObject[] spawPosition;
 	public GameObject EnemyManager;
@@ -26,14 +27,14 @@ public class TimeEnemyCreate : MonoBehaviour {
 		}
 		if(emanage.MaxEnemyCount>emanage.EnemyCount){
 			for(int i = 0;i < CreateTime.Length;i++){
-				if(i==1){
-					Position=spawPosition [2].transform.position+Vector3.down;
-				}
-				if(i==0||i==3){
+				if(LineNumber[i]==0){
 					Position=spawPosition [0].transform.position+Vector3.down;
 				}
-				if(i==2){
+				if(LineNumber[i]==1){
 					Position=spawPosition [1].transform.position+Vector3.down;
+				}
+				if(LineNumber[i]==2){
+					Position=spawPosition [2].transform.position+Vector3.down;
 				}
 			if(time.time==CreateTime[i]){
 					if(!CreateFlag){
