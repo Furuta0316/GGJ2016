@@ -68,5 +68,9 @@ public class SceneManagerGetter : MonoBehaviour
         manager.StageLoad(stageNumber);
     }
 
+    public void Retry()
+    {
+        manager.StageRetry();
+    }
 	#endregion
 }

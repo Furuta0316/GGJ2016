@@ -163,5 +163,13 @@ public class SceneChanger : MonoBehaviour
             yield break;
         }
     }
+
+    public void StageRetry()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        
+        speed = 0.05f;
+        StartCoroutine(FadeIn( scene.name, 0.05f, new Color(0, 0, 0, 0)));
+    }
 	#endregion
 }
