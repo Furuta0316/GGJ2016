@@ -28,7 +28,7 @@ public class SceneChanger : MonoBehaviour
         Title,
         Tutorial,
         StageSelect,
-        MainGame,
+        Stage1_example,
         Clear,
         GameOver,
         Ending,
@@ -82,7 +82,7 @@ public class SceneChanger : MonoBehaviour
 
     public void AddScene(SceneName sceneName)
     {
-        SceneManager.LoadScene(sceneName.ToString());
+		SceneManager.LoadScene(sceneName.ToString(), LoadSceneMode.Additive);
     }
 
     public void SceneChange(string sceneName)

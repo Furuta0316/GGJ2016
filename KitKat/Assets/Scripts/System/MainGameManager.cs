@@ -67,7 +67,7 @@ public class MainGameManager : MonoBehaviour
     void NextStage()
     {
         stageNumber++;
-        sceneManager.SceneChange(SceneChanger.SceneName.MainGame);
+		sceneManager.SceneChange(SceneChanger.SceneName.Stage1_example);
         sceneManager.StageLoad(stageNumber);
     }
 
