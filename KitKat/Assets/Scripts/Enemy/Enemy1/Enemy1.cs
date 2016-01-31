@@ -6,6 +6,8 @@ public class Enemy1 : EnemyState {
 	int initTime;//ノックバック時間の初期値	
 	EnemyAtack  enemyAtack;//
 	int DeviatTime;
+	int t;
+	bool f;
 	 GameObject Boy1;
 	public int PlayerLine;//プレイヤーのいるライン
 	public GameObject atackSe;
@@ -16,6 +18,7 @@ public class Enemy1 : EnemyState {
 	public OniImageChange change;
 	// Use this for initialization
 	void Start () {
+		t = 0;
 		change = child.GetComponent<OniImageChange> ();
 		zero = 1;
 		Boy1 = GameObject.Find ("Player");
@@ -37,6 +40,7 @@ public class Enemy1 : EnemyState {
 
 	// Update is called once per frame
 	void Update () {
+		
 		//debug
 		if(Input.GetKeyDown(KeyCode.A)){
 			//Bend ();
@@ -68,8 +72,26 @@ public class Enemy1 : EnemyState {
 		Move ();
 			}
 			if(AtackFlag){
-				Stand ();
-			
+				
+
+				++t;
+				if(t>100){
+					change.Atack ();
+					if(!f){
+						Atack ();
+						f = true;
+					}
+				//	AtackFlag = false;
+				}
+				if(t>140){
+					f = false;
+					t = 0;
+				}
+				if(t<100){
+					change.Stand ();
+				}
+			//	Stand ();
+
 			}
 		}
 			//仰け反り
@@ -118,13 +140,14 @@ public class Enemy1 : EnemyState {
 	void EscapeRun(){//やられて逃げる時の動き
 		//とりあえず来たレーンを走って戻る
 		speed = 10;//走るため速く
+		change.Escape();
 		transform.position = Position + Vector3.left * Time.deltaTime*speed;
 	}
 	void Atack(){
-		
 		enemyAtack.enabled = true;//
 
 		Instantiate (atackSe,Vector3.zero,Quaternion.identity);//Debug.Log("a");
+	
 	}
 	void OnCollisionEnter(Collision col){
 		if(col.collider.tag=="Soy"){//豆との当たり判定
@@ -148,12 +171,12 @@ public class Enemy1 : EnemyState {
 	void Stand(){
 		Standflag = true;
 		if(Standflag){
-			change.Atack ();
-		//	change.Stand ();
+			
+
 			--StandTime;
 		}
 		if(StandTime<0){
-			
+			//change.Atack ();
 			Atack ();
 			Standflag = false;
 			StandTime = 100;

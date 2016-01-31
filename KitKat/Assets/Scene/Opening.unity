@@ -562,7 +562,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00001049041, y: -508}
+  m_AnchoredPosition: {x: 0.00001049041, y: -436}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1456457239
@@ -586,7 +586,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 66
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -744,7 +744,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445578, guid: 2345c8346c3743c4ca2c76e2e90c08ed, type: 2}
       propertyPath: time
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 11445578, guid: 2345c8346c3743c4ca2c76e2e90c08ed, type: 2}
       propertyPath: sceneName
