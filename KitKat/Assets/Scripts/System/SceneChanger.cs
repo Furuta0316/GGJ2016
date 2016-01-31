@@ -151,7 +151,7 @@ public class SceneChanger : MonoBehaviour
 
     public void StageLoad(int stageNumber)
     {
-        SceneManager.LoadScene("stage" + stageNumber, LoadSceneMode.Additive);
+        SceneManager.LoadScene("Stage" + stageNumber, LoadSceneMode.Single);
     }
 
     IEnumerator SyncSceneChange(string name)

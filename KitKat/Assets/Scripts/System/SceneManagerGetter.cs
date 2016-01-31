@@ -63,5 +63,10 @@ public class SceneManagerGetter : MonoBehaviour
         manager.SceneChange(sceneName);
     }
 
+    public void StageLoad(int stageNumber)
+    {
+        manager.StageLoad(stageNumber);
+    }
+
 	#endregion
 }
