@@ -9,18 +9,26 @@ public class EnemyManager : MonoBehaviour {
 	public bool Line2;//ライン2にいるか？
 	public bool Line3;//ライン3にいるか？
 	public bool flag;
+	public GameObject ClearSE;
+	public GameObject bgm;
+	AudioSource audioS;
 	// Use this for initialization
 	void Start () {
 		//初期状態取得
 		EnemyCount = getEnemyCount ();
 		LineBoolChange ();
 		flag = false;
+		bgm = GameObject.Find ("BGM");
+		audioS = bgm.GetComponent<AudioSource> ();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (ClearCount <= 0) {
 			if(!flag){
+				audioS.mute = true;
+				Instantiate (ClearSE,Vector3.zero,Quaternion.identity);
 				SceneChanger.Manager.AddScene (SceneChanger.SceneName.Clear);
 				flag = true;
 			}
