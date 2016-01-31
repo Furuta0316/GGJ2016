@@ -77,7 +77,7 @@ public class Player_oti : MonoBehaviour {
 
 		if (GameObject.Find ("Player").GetComponent<SoyShot_oti> ().nageru == false) {
 			time += Time.deltaTime;
-			if (time >= 1.0f) {
+			if (time >= 0.5f) {
 				GameObject.Find ("Player").GetComponent<SoyShot_oti> ().nageru = true;
 			}
 		} else {
