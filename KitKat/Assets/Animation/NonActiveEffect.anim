@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: HukuEffect
+  m_Name: NonActiveEffect
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,57 +19,67 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: 0, y: 0, z: 1}
-        inSlope: {x: 1.5, y: 1.5, z: 0}
-        outSlope: {x: 4.8517466, y: 4.7462616, z: 0}
+        value: {x: 1.014191, y: 1.026275, z: 1}
+        inSlope: {x: -1, y: -1, z: 0}
+        outSlope: {x: 3.6134229, y: 3.6074157, z: 0}
         tangentMode: 0
       - time: 1
-        value: {x: 1.5, y: 1.4890763, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
+        value: {x: 0.014191031, y: 0.026274998, z: 1}
+        inSlope: {x: -3.4413555, y: -3.386997, z: 0}
+        outSlope: {x: -1, y: -1, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Image
+    path: HukuOn
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: {x: 0, y: 0, z: 1}
-        inSlope: {x: 3.2163851, y: 1, z: 0}
-        outSlope: {x: 3.2163851, y: 3.182037, z: 0}
-        tangentMode: 0
-      - time: 1
-        value: {x: 1, y: 1, z: 1}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: 
+    path: circle
   m_FloatCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
       - time: 1
         value: 0
-        inSlope: -3.1625228
-        outSlope: -3.1625228
-        tangentMode: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Color.a
-    path: Image
-    classID: 114
-    script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+    attribute: m_IsActive
+    path: HukuOn
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: circle
+    classID: 1
+    script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -78,22 +88,28 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 83635035
+    - path: 885553
       attribute: 3
       script: {fileID: 0}
       classID: 4
       customType: 0
       isPPtrCurve: 0
-    - path: 0
+    - path: 885553
+      attribute: 2086281974
+      script: {fileID: 0}
+      classID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3568788857
+      attribute: 2086281974
+      script: {fileID: 0}
+      classID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - path: 3568788857
       attribute: 3
       script: {fileID: 0}
       classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 83635035
-      attribute: 304273561
-      script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-      classID: 114
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping: []
@@ -122,40 +138,40 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: 1.5
-        outSlope: 4.8517466
+        value: 1.014191
+        inSlope: -1
+        outSlope: 3.6134229
         tangentMode: 1
       - time: 1
-        value: 1.5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        value: 0.014191031
+        inSlope: -3.4413555
+        outSlope: -1
+        tangentMode: 1
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: Image
+    path: HukuOn
     classID: 224
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: 1.5
-        outSlope: 4.7462616
+        value: 1.026275
+        inSlope: -1
+        outSlope: 3.6074157
         tangentMode: 1
       - time: 1
-        value: 1.4890763
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        value: 0.026274998
+        inSlope: -3.386997
+        outSlope: -1
+        tangentMode: 1
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: Image
+    path: HukuOn
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -165,7 +181,7 @@ AnimationClip:
         value: 1
         inSlope: 0
         outSlope: 0
-        tangentMode: 10
+        tangentMode: 1
       - time: 1
         value: 1
         inSlope: 0
@@ -175,7 +191,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: Image
+    path: HukuOn
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -183,39 +199,49 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
       - time: 1
         value: 0
-        inSlope: -3.1625228
-        outSlope: -3.1625228
-        tangentMode: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Color.a
-    path: Image
-    classID: 114
-    script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+    attribute: m_IsActive
+    path: HukuOn
+    classID: 1
+    script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 3.2163851
-        outSlope: 3.2163851
-        tangentMode: 0
-      - time: 1
-        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: circle
+    classID: 1
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
         inSlope: 0
         outSlope: 0
-        tangentMode: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.x
-    path: 
+    path: circle
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -223,30 +249,20 @@ AnimationClip:
       m_Curve:
       - time: 0
         value: 0
-        inSlope: 1
-        outSlope: 3.182037
-        tangentMode: 1
-      - time: 1
-        value: 1
         inSlope: 0
         outSlope: 0
-        tangentMode: 0
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.y
-    path: 
+    path: circle
     classID: 224
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 10
-      - time: 1
         value: 1
         inSlope: 0
         outSlope: 0
@@ -255,7 +271,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalScale.z
-    path: 
+    path: circle
     classID: 224
     script: {fileID: 0}
   m_EulerEditorCurves: []
