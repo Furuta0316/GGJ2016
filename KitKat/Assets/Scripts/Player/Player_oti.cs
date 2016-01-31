@@ -87,13 +87,156 @@ public class Player_oti : MonoBehaviour {
 
 	void OnEnable ()
 	{
-		TouchManager.Instance.FlickStart += OnFlickStart;
+		//TouchManager.Instance.FlickStart += OnFlickStart;
+		TouchManager.Instance.Drag += OnSwipe;
 	}
 	void OnDisable ()
 	{
-		TouchManager.Instance.FlickStart -= OnFlickStart;
+		//TouchManager.Instance.FlickStart -= OnFlickStart;
+		TouchManager.Instance.Drag -= OnSwipe;
 	}
 
+	void OnSwipe (object sender, CustomInputEventArgs e)
+	{
+		if (moveP == 1) {
+			if (e.Input.DeltaPosition.y < -5) {
+				GameObject.Find ("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 4;
+			}
+			if (e.Input.DeltaPosition.x > 5) {
+				GameObject.Find ("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 2;
+			}
+		}
+		if (moveP == 2) {
+			if (e.Input.DeltaPosition.y < -5) {
+				GameObject.Find ("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 5;
+			}
+			if (e.Input.DeltaPosition.x > 5) {
+				GameObject.Find ("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 3;
+			}
+			if (e.Input.DeltaPosition.x < -5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 1;
+			}
+		}
+		if (moveP == 3) {
+			if (e.Input.DeltaPosition.y < -5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 6;
+			}
+			if (e.Input.DeltaPosition.x < -5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 2;
+			}
+		}
+		if (moveP == 4) {
+			if (e.Input.DeltaPosition.y > 5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 1;
+			}
+			if (e.Input.DeltaPosition.y < -5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 7;
+			}
+			if (e.Input.DeltaPosition.x > 5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 5;
+			}
+		}
+		if (moveP == 5) {
+			if (e.Input.DeltaPosition.y > 5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 2;
+			}
+			if (e.Input.DeltaPosition.y < -5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 8;
+			}
+			if (e.Input.DeltaPosition.x > 5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 6;
+			}
+			if (e.Input.DeltaPosition.x < -5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 4;
+			}
+		}
+		if (moveP == 6) {
+			if (e.Input.DeltaPosition.y > 5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 3;
+			}
+			if (e.Input.DeltaPosition.y < -5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 9;
+			}
+			if (e.Input.DeltaPosition.x < -5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 5;
+			}
+		}
+		if (moveP == 7) {
+			if (e.Input.DeltaPosition.y > 5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 4;
+			}
+			if (e.Input.DeltaPosition.x > 5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 8;
+			}
+		}
+		if (moveP == 8) {
+			if (e.Input.DeltaPosition.y > 5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 5;
+			}
+			if (e.Input.DeltaPosition.x > 5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 9;
+			}
+			if (e.Input.DeltaPosition.x < -5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 7;
+			}
+		}
+		if (moveP == 9) {
+			if (e.Input.DeltaPosition.y > 5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 6;
+			}
+			if (e.Input.DeltaPosition.x < -5) {
+				GameObject.Find("Player").GetComponent<SoyShot_oti> ().nageru = false;
+				anim.SetTrigger ("move");
+				moveF = 8;
+			}
+		}
+	}/*
 	void OnFlickStart (object sender, FlickEventArgs e)
 	{
 		if (moveP == 1) {
@@ -235,4 +378,5 @@ public class Player_oti : MonoBehaviour {
 			}
 		}
 	}
+	*/
 }
