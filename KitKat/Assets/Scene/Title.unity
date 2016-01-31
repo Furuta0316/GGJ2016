@@ -602,7 +602,7 @@ GameObject:
   - 114: {fileID: 892394773}
   - 95: {fileID: 892394776}
   m_Layer: 5
-  m_Name: Button
+  m_Name: OPBotton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -855,10 +855,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 29
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 29
+    m_MinSize: 2
     m_MaxSize: 29
     m_Alignment: 4
     m_AlignByGeometry: 1
@@ -866,7 +866,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u30E1\u30A4\u30F3\u30B2\u30FC\u30E0"
+  m_Text: "\u30AA\u30FC\u30D7\u30CB\u30F3\u30B0\u3092\u898B\u308B"
 --- !u!222 &1643273548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1031,10 +1031,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 25
+    m_MinSize: 2
     m_MaxSize: 29
     m_Alignment: 4
     m_AlignByGeometry: 1
@@ -1062,7 +1062,7 @@ GameObject:
   - 114: {fileID: 1921103759}
   - 95: {fileID: 1921103762}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: SelectBotton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1304,7 +1304,7 @@ GameObject:
   - 114: {fileID: 2076568192}
   - 95: {fileID: 2076568195}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: ExitBotton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
