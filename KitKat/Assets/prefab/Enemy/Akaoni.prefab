@@ -209,6 +209,8 @@ MonoBehaviour:
   EscapeSe: {fileID: 134062, guid: d9fedbba24ba9a940a1bda1f727a09d5, type: 2}
   NockBackSE: {fileID: 133622, guid: a0ae6e67d2ee7174c95d6ea518cf3c06, type: 2}
   zero: 0
+  child: {fileID: 116384}
+  change: {fileID: 0}
 --- !u!114 &11449500
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -220,10 +222,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b496c4ae5ed6854cbd21729605ed344, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rend: {fileID: 21240232}
   Oni:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: c0352786db59b17499ca9d57854dfd97, type: 3}
+  - {fileID: 21300000, guid: 50bc5472a0f8f584f978ff06f9c0cf58, type: 3}
+  - {fileID: 21300000, guid: 5eb9260129ef18c4fa217de687218629, type: 3}
+  - {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23, type: 3}
+  - {fileID: 21300000, guid: e6029909d03205e47be7116d77e36381, type: 3}
+  - {fileID: 21300000, guid: 98e448bba9303604783120e2042112f9, type: 3}
+  - {fileID: 21300000, guid: 4bbc987993cf35f42be56bc87bd0287b, type: 3}
+  - {fileID: 21300000, guid: b48890c17e3fb504eaa9776dbf68da07, type: 3}
+  - {fileID: 21300000, guid: 64293f532bf066d41b52a1f44afab067, type: 3}
+  - {fileID: 21300000, guid: 36012d585ffc8304689a7f8ec4d7cb78, type: 3}
+  - {fileID: 21300000, guid: e0548a6502e1a974883d94059ee85f9a, type: 3}
+  - {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23, type: 3}
+  Walkf: 0
+  Atackf: 0
+  Standf: 0
+  Damagef: 0
 --- !u!114 &11466324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,7 +318,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: Oni.Array.size
-      value: 3
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: atackSe
@@ -328,6 +344,113 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -1.7
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: c0352786db59b17499ca9d57854dfd97,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 50bc5472a0f8f584f978ff06f9c0cf58,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5eb9260129ef18c4fa217de687218629,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: rend
+      value: 
+      objectReference: {fileID: 21240232}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: e6029909d03205e47be7116d77e36381,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[12]
+      value: 
+      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[13]
+      value: 
+      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[14]
+      value: 
+      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[15]
+      value: 
+      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[16]
+      value: 
+      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[17]
+      value: 
+      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[18]
+      value: 
+      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[19]
+      value: 
+      objectReference: {fileID: 21300000, guid: 791b5521600255e489b9d67b833a9f23,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 98e448bba9303604783120e2042112f9,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4bbc987993cf35f42be56bc87bd0287b,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: b48890c17e3fb504eaa9776dbf68da07,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 64293f532bf066d41b52a1f44afab067,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 36012d585ffc8304689a7f8ec4d7cb78,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: Oni.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: e0548a6502e1a974883d94059ee85f9a,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 107262}
+    - target: {fileID: 0}
+      propertyPath: child
+      value: 
+      objectReference: {fileID: 116384}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 107262}

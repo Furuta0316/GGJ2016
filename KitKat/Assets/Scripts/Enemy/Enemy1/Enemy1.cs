@@ -12,8 +12,11 @@ public class Enemy1 : EnemyState {
 	public GameObject EscapeSe;
 	public GameObject NockBackSE;
 	public int zero;
+	public GameObject child;
+	public OniImageChange change;
 	// Use this for initialization
 	void Start () {
+		change = child.GetComponent<OniImageChange> ();
 		zero = 1;
 		Boy1 = GameObject.Find ("Player");
 		PanelZSize = 5;
@@ -37,7 +40,7 @@ public class Enemy1 : EnemyState {
 		//debug
 		if(Input.GetKeyDown(KeyCode.A)){
 			//Bend ();
-			Escape = true;
+		//	Escape = true;
 			//AtackFlag=true;
 		}
 	}
@@ -93,10 +96,11 @@ public class Enemy1 : EnemyState {
 		}
 	}
 	void Move(){//キャラの動き　真っ直ぐ
+		change.Walk();
 		transform.position = Position + Vector3.right * Time.deltaTime*speed*zero;
 	}
 	void Bend(){//仰け反り
-		
+		change.Damage();
 		NockBack = true;
 
 	}
@@ -117,6 +121,7 @@ public class Enemy1 : EnemyState {
 		transform.position = Position + Vector3.left * Time.deltaTime*speed;
 	}
 	void Atack(){
+		
 		enemyAtack.enabled = true;//
 
 		Instantiate (atackSe,Vector3.zero,Quaternion.identity);//Debug.Log("a");
@@ -143,9 +148,12 @@ public class Enemy1 : EnemyState {
 	void Stand(){
 		Standflag = true;
 		if(Standflag){
+			change.Atack ();
+		//	change.Stand ();
 			--StandTime;
 		}
 		if(StandTime<0){
+			
 			Atack ();
 			Standflag = false;
 			StandTime = 100;
